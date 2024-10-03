@@ -37,7 +37,6 @@ const submitHandler = async (event: React.FormEvent) => {
 
   productData.Title = value
   const response = axios.post<IProduct>('https://fakestoreapi.com/products', productData)
-
   onCreate((await response).data)
 }   
 
